@@ -189,3 +189,56 @@ body {
 .laptop-screen::-webkit-scrollbar {
   display: none;
 }
+
+.github {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.months-dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.github-chart {
+  width: 820px;
+  text-align: center;
+}
+
+.squares-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.square {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 2s ease;
+}
+
+.square.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.github-chart:hover .square.active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+.github-chart:hover .square.active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+.github h1 {
+  font-size: 100px;
+  color: #333;
+}
