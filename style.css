@@ -150,7 +150,7 @@ body {
   height: 600px;
 }
 
-.screen {
+.phone-screen {
   position: absolute;
   top: 17px;
   left: 18px;
@@ -161,6 +161,27 @@ body {
   overflow: scroll;
 }
 
-.screen::-webkit-scrollbar {
+.phone-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+}
+
+.laptop-screen {
+  position: absolute;
+  width: 451px;
+  height: 283px;
+  top: 18px;
+  left: 68px;
+  background: blue;
+  overflow: scroll;
+}
+
+.laptop-screen::-webkit-scrollbar {
   display: none;
 }
