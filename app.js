@@ -1,4 +1,12 @@
 const squaresContainer = document.querySelector(".squares-container");
+const hiContainer = document.querySelector(".hi-container");
+const imageContainer = document.querySelector(".image-container");
+const autherName = document.querySelector(".auther-name");
+const jobContainers = document.querySelectorAll(".job-container");
+const jobTitles = document.querySelectorAll(".job-container h2");
+const projectsTitle = document.querySelector(".projects-title");
+const phones = document.querySelectorAll(".phone");
+const laptop = document.querySelector(".laptop");
 
 const list = [
   0, 1, 2, 3, 41, 42, 43, 44, 82, 83, 123, 124, 125, 126, 164, 165, 166, 167,
@@ -21,3 +29,18 @@ for (let i = 0; i < 365; i++) {
   square.classList = `${list.includes(i) ? "square active" : "square"}`;
   squaresContainer.appendChild(square);
 }
+
+window.addEventListener("scroll", (e) => {
+  const Y = window.scrollY;
+  hiContainer.style.transform = `translateY(${Y * 0.1}px)`;
+  imageContainer.style.transform = `translate(${Y * 0.4}px, ${Y * 0.7}px)`;
+  autherName.style.transform = `translateX(${Y * 0.1}px)`;
+  jobContainers[0].style.backgroundPositionY = `${Y * 0.5}px`;
+  jobContainers[1].style.backgroundPositionY = `${-Y * 0.5}px`;
+  jobTitles[0].style.transform = `translateX(calc(200vh - ${Y}px))`;
+  jobTitles[1].style.transform = `translateX(calc(-300vh + ${Y}px))`;
+  projectsTitle.style.transform = `translateY(calc(400vh - ${Y}px))`;
+  phones[0].style.transform = `translateX(calc(500vh - ${Y}px))`;
+  laptop.style.transform = `translateX(calc(-600vh + ${Y}px))`;
+  phones[1].style.transform = `translateX(calc(750vh - ${Y}px))`;
+});
