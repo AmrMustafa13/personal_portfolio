@@ -102,6 +102,10 @@ body {
   height: 100vh;
 }
 
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
 .project-info {
   flex: 1;
   display: flex;
