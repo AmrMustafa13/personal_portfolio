@@ -296,4 +296,7 @@ body {
   .github-small img {
     width: 80px;
   }
+  .project-info h2 {
+    font-size: 8vw;
+  }
 }
